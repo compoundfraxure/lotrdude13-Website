@@ -16,6 +16,8 @@
         <link rel="stylesheet" href="css/main.css">
 		<link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
         <script src="js/vendor/modernizr-2.6.2.min.js"></script>
+		<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+		
     </head>
     <body>
         <!--[if lt IE 9]>
@@ -30,16 +32,56 @@
                         <a href="index.html" class="brand-logo"><img src="img/Lotrdude13logo2x50.png" alt="Lotrdude13"></a>
                             <ul id="nav-mobile" class="right side-nav">
                                 <li><a href="#">About</a></li>
+								<li><a href="#">Playlists</a></li>
                                 <li><a href="#">Gallery</a></li>
                                 <li><a href="#">Contact</a></li>
                             </ul>
+						<a href="#" data-activates="nav-mobile" class="button-collapse"><i class="mdi-navigation-menu"></i></a>
                     </div>
                     </div>
                 </nav>
             </header>
         <div class="container">
             <p>Hello world! This is HTML5 Boilerplate.</p>
-        </div>
+        			
+			<div class="row">
+				<div class="col s12 m12 l8">
+					<div class="video-container">
+						<div id="static_video"></div>
+						<script type="text/javascript">
+							function showVideo(response) {
+								if(response.data && response.data.items) {
+									var items = response.data.items;
+									if(items.length>0) {
+										var item = items[0];
+										var videoid = "http://www.youtube.com/embed/"+item.id;
+										console.log("Latest ID: '"+videoid+"'");
+										var video = "<iframe width='420' height='315' src='"+videoid+"' frameborder='0' allowfullscreen></iframe>"; 
+										$('#static_video').html(video);
+									}
+								}
+							}
+						</script>
+						<script type="text/javascript" src="https://gdata.youtube.com/feeds/api/users/lotrdude13/uploads?max-results=1&orderby=published&v=2&alt=jsonc&callback=showVideo"></script>
+					</div>
+				</div>
+				<div class="col col s12 m12 l4">
+					<div class="card">
+						<div class="card-content">
+							<span class="card-title black-text">Hello, what is up?</span>
+							<p>I am a very simple card. I am good at containing small bits of information.
+							I am convenient because I require little markup to use effectively.</p>
+						</div>
+						<div class="card-action">
+							<a href="#">This is a link</a>
+							<a href='#'>This is a link</a>
+						</div>
+					</div>
+				</div>
+			
+			</div>
+		</div>
+		
 		<footer class="page-footer green lighten-2">
           <div class="container">
             <div class="row">
@@ -49,10 +91,7 @@
               </div>
               <div class="col l4 offset-l2 s12">
                 <h5 class="white-text">Links</h5>
-                <li><a class="grey-text text-lighten-3" href="#!">Link 1</a></li>
-                <li><a class="grey-text text-lighten-3" href="#!">Link 2</a></li>
-                <li><a class="grey-text text-lighten-3" href="#!">Link 3</a></li>
-                <li><a class="grey-text text-lighten-3" href="#!">Link 4</a></li>
+                <a href="https://twitter.com/lotrdude13" class="twitter-follow-button" data-show-count="true" data-size="large" data-dnt="true">Follow @lotrdude13</a>
               </div>
             </div>
           </div>
@@ -64,11 +103,13 @@
         </footer>
         
 
-		<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+		
 		<script type="text/javascript" src="js/materialize.min.js"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.2.min.js"><\/script>')</script>
         <script src="js/plugins.js"></script>
         <script src="js/main.js"></script>
+		<script src="https://apis.google.com/js/platform.js"></script>
+		<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
 
         <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
         <script>
@@ -81,3 +122,7 @@
         </script>
     </body>
 </html>
+<!-- Place this tag in your head or just before your close body tag. -->
+
+
+<!-- Place this tag where you want the widget to render. -->
