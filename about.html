@@ -45,63 +45,7 @@
 		
 		<main>
 			<div class="container">
-            <p>Hello world! This is HTML5 Boilerplate.</p>
-        			
-				<div class="row">                  <!-- Video and Card -->
-					<div class="col s12 m12 l8">   
-						<div class="row">          <!-- Video Selector -->
-							<div class="col s12">
-								<ul class="tabs">
-									<li class="tab col s4"><a href="#recent" class="active green-text">Recent</a></li>
-									<li class="tab col s4"><a class="green-text" href="#trailer">Trailer</a></li>
-									<li class="tab col s4"><a href="#random" class="green-text">Random</a></li>
-								</ul>
-							</div>
-							<div id="recent" class="col s12">
-							<div class="video-container">
-							<iframe width="1280" height="720" src="//www.youtube.com/embed/videoseries?list=UUp8U_DhXPuc2-WOtPKMYHcw" frameborder="0" allowfullscreen></iframe>
-							<div id="static_video"></div>
-							<script type="text/javascript">
-								function showVideo(response) {
-									if(response.data && response.data.items) {
-										var items = response.data.items;
-										if(items.length>0) {
-											var item = items[0];
-											var videoid = "http://www.youtube.com/embed/"+item.id;
-											console.log("Latest ID: '"+videoid+"'");
-											var video = "<iframe width='420' height='315' src='"+videoid+"' frameborder='0' allowfullscreen></iframe>"; 
-											$('#static_video').html(video);
-										}
-									}
-								}
-							</script>
-							<script type="text/javascript" src="https://gdata.youtube.com/feeds/api/users/lotrdude13/uploads?max-results=1&orderby=published&v=2&alt=jsonc&callback=showVideo"></script>
-						</div>
-							</div>
-							<div id="trailer" class="col s12">
-								Not Working Yet
-							</div>
-							<div id="random" class="col s12">
-								Not Working Yet
-							</div>
-						</div>
-						
-					</div>
-					
-					<div class="col col s12 m12 l4">
-						<div class="card">
-							<div class="card-content">
-								<span class="card-title black-text">Hello, what is up?</span>
-								<p>I am a very simple card. I am good at containing small bits of information.
-								I am convenient because I require little markup to use effectively.</p>
-							</div>
-							<div class="card-action">
-								<a href="#">This is a link</a>
-								<a href='#'>This is a link</a>
-							</div>
-						</div>
-					</div>
-				</div>
+				
 			</div>
 		</main>
 		
