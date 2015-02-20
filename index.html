@@ -17,6 +17,7 @@
 		<link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
         <script src="js/vendor/modernizr-2.6.2.min.js"></script>
 		<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+
 		
     </head>
     <body>
@@ -31,9 +32,9 @@
                     <div class="nav-wrapper">
                         <a href="index.html" class="brand-logo"><img src="img/Lotrdude13logo2x50.png" alt="Lotrdude13"></a>
                             <ul id="nav-mobile" class="right side-nav">
-                                <li><a href="#">About</a></li>
-								<li><a href="#">Playlists</a></li>
-                                <li><a href="#">Gallery</a></li>
+                                <li><a href="about.html">About</a></li>
+								<li><a href="playlists.html">Playlists</a></li>
+                                <li><a href="gallery.html">Gallery</a></li>
                                 <li><a href="contact.html">Contact</a></li>
                             </ul>
 						<a href="#" data-activates="nav-mobile" class="button-collapse"><i class="mdi-navigation-menu"></i></a>
@@ -79,7 +80,9 @@
 						</div>
 							</div>
 							<div id="trailer" class="col s12">
-								Not Working Yet
+								<div id="video-container z-depth-4">
+									<iframe width="420" height="315" src="https://www.youtube.com/embed/ue8fyl92suI?rel=0" frameborder="0" allowfullscreen></iframe>
+								</div>	
 							</div>
 							<div id="random" class="col s12">
 								Not Working Yet
@@ -88,7 +91,7 @@
 						
 					</div>
 					
-					<div class="col col s12 m12 l4">
+					<div class="col s12 m12 l4">
 						<div class="card">
 							<div class="card-content">
 								<span class="card-title black-text">Hello, what is up?</span>
@@ -132,7 +135,7 @@
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.2.min.js"><\/script>')</script>
         <script src="js/plugins.js"></script>
         <script src="js/main.js"></script>
-		<script src="https://apis.google.com/js/platform.js"></script>
+		
 		<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
 
         <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
